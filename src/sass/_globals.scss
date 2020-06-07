@@ -1,0 +1,67 @@
+// css variables
+:root {
+  --font-size: 16px;
+}
+// sass variables
+$colors : (
+  primary: #f7df1e,
+  secondary: #222222,
+  primary-modal: rgba(247, 222, 30, .85),
+  secondary-modal: rgba(34, 34, 34, .85)
+);
+$max-width: 1200px;
+$font-family: 'Roboto', sans-serif;;
+
+// extends
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// mixins
+@mixin flex($direction, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+// global styles
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  font-size: var(--font-size);
+  font-family: $font-family;
+  color: map-get($colors, secondary);
+}
+img {
+  width: 100%;
+  height: auto;
+}
+.header {
+  position: sticky;
+  top: 0;
+  padding: 1rem;
+  background: map-get($colors, primary);
+
+  h1 {
+    margin: 0;
+    text-align: center;
+  }
+}
+.section {
+  width: 100%;
+  max-width: $max-width;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 4rem 2rem 2rem;
+  text-align: center;
+}

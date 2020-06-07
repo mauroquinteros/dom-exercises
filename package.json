@@ -1,0 +1,11 @@
+{
+  "name": "javascript-fundamentals",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  },
+  "keywords": ["javascript", "html", "css", "dom"],
+  "author": "Mauro Quinteros",
+  "license": "ISC"
+}
